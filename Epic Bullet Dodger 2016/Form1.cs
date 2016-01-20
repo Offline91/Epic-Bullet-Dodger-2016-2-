@@ -25,11 +25,22 @@ namespace Epic_Bullet_Dodger_2016
         int drawY = 155;
         int drawX2 = 500;
         int drawY2 = 300;
-        int drawX3 = 300;
-        int drawY3 = 300;
-        int drawX4 = 100;
-        int drawY4 = 300;
-        int speed = 8;
+        int drawX3 = 750;
+        int drawY3 = 200;
+        int drawX4 = 1000;
+        int drawY4 = 100;
+        int drawX5 = 1150;
+        int drawY5 = 400;
+        int drawX6 = 1300;
+        int drawY6 = 500;
+        int drawX7 = 500;
+        int drawY7 = 50;
+        int speed = 1;
+        int speed2 = 1;
+        int speed3 = 1;
+        int speed4 = 1;
+        int speed5 = 1;
+        int speed6 = 1;
         int counter = 1;
 
 
@@ -107,11 +118,46 @@ namespace Epic_Bullet_Dodger_2016
 
             //bullet movements
             drawX2 -= speed;
-
+            drawX3 -= speed2;
+            drawX4 -= speed3;
+            drawX5 -= speed4;
+            drawX6 -= speed5;
+            drawX7 -= speed6;
             //check if bullet is off screen
             if (drawX2 < 0)
             {
                 drawX2 = 500;
+                speed++;
+            }
+
+            if (drawX3 < 0)
+            {
+                drawX3 = 750;
+                speed2++;
+            }
+
+            if (drawX4 < 0)
+            {
+                drawX4 = 1000;
+                speed3++;
+            }
+            
+            if (drawX5 < 0)
+            {
+                drawX5 = 1150;
+                speed4++;
+            }
+            
+            if (drawX6 < 0)
+            {
+                drawX6 = 1300;
+                speed5++;
+            }
+
+            if (drawX7 < 0)
+            {
+                drawX7 = 500;
+                speed6++;
             }
 
             //check for collision
@@ -122,6 +168,9 @@ namespace Epic_Bullet_Dodger_2016
                 quitButton1.Visible = true;
                 playButton1.Text = "Play Again?";
                 gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
+
             }
 
             //increase speed (maybe)
@@ -149,7 +198,9 @@ namespace Epic_Bullet_Dodger_2016
             e.Graphics.FillRectangle(drawbrush2, drawX2, drawY2, 50, 40);
             e.Graphics.FillRectangle(drawbrush2, drawX3, drawY3, 50, 40);
             e.Graphics.FillRectangle(drawbrush2, drawX4, drawY4, 50, 40);
-            
+            e.Graphics.FillRectangle(drawbrush2, drawX5, drawY5, 50, 40);
+            e.Graphics.FillRectangle(drawbrush2, drawX6, drawY6, 50, 40);
+            e.Graphics.FillRectangle(drawbrush2, drawX7, drawY7, 50, 40);
         }
 
 
