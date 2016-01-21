@@ -126,37 +126,37 @@ namespace Epic_Bullet_Dodger_2016
             //check if bullet is off screen
             if (drawX2 < 0)
             {
-                drawX2 = 500;
+                drawX2 = 300;
                 speed++;
             }
 
             if (drawX3 < 0)
             {
-                drawX3 = 750;
+                drawX3 = 600;
                 speed2++;
             }
 
             if (drawX4 < 0)
             {
-                drawX4 = 1000;
+                drawX4 = 800;
                 speed3++;
             }
             
             if (drawX5 < 0)
             {
-                drawX5 = 1150;
+                drawX5 = 400;
                 speed4++;
             }
             
             if (drawX6 < 0)
             {
-                drawX6 = 1300;
+                drawX6 = 500;
                 speed5++;
             }
 
             if (drawX7 < 0)
             {
-                drawX7 = 500;
+                drawX7 = 700;
                 speed6++;
             }
 
@@ -170,9 +170,70 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
+                drawX2 = 300;
+                drawX3 = 600;
+                drawX4 = 800;
+                drawX5 = 400;
+                drawX6 = 500;
+                drawX7 = 700;
+
 
             }
+            double distance2 = Math.Pow(drawX3 - drawX, 2) + Math.Pow(drawY3 - drawY, 2);
+            if (distance2 < 40)
+            {
+                playButton1.Visible = true;
+                quitButton1.Visible = true;
+                playButton1.Text = "Play Again?";
+                gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
 
+            }
+            double distance3 = Math.Pow(drawX4 - drawX, 2) + Math.Pow(drawY4 - drawY, 2);
+            if (distance3 < 40)
+            {
+                playButton1.Visible = true;
+                quitButton1.Visible = true;
+                playButton1.Text = "Play Again?";
+                gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
+
+            }
+            double distance4 = Math.Pow(drawX5 - drawX, 2) + Math.Pow(drawY5 - drawY, 2);
+            if (distance4 < 40)
+            {
+                playButton1.Visible = true;
+                quitButton1.Visible = true;
+                playButton1.Text = "Play Again?";
+                gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
+
+            }
+            double distance5 = Math.Pow(drawX6 - drawX, 2) + Math.Pow(drawY6 - drawY, 2);
+            if (distance5 < 40)
+            {
+                playButton1.Visible = true;
+                quitButton1.Visible = true;
+                playButton1.Text = "Play Again?";
+                gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
+
+            }
+            double distance6 = Math.Pow(drawX7 - drawX, 2) + Math.Pow(drawY7 - drawY, 2);
+            if (distance6 < 40)
+            {
+                playButton1.Visible = true;
+                quitButton1.Visible = true;
+                playButton1.Text = "Play Again?";
+                gametimer.Enabled = false;
+                speed = 1;
+                drawY = 155;
+
+            }
             //increase speed (maybe)
 
             // - add one to global counter
