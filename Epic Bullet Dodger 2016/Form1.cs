@@ -29,9 +29,9 @@ namespace Epic_Bullet_Dodger_2016
         int drawY3 = 200;
         int drawX4 = 1000;
         int drawY4 = 100;
-        int drawX5 = 1150;
+        int drawX5 = 1050;
         int drawY5 = 400;
-        int drawX6 = 1300;
+        int drawX6 = 1150;
         int drawY6 = 500;
         int drawX7 = 500;
         int drawY7 = 50;
@@ -42,7 +42,7 @@ namespace Epic_Bullet_Dodger_2016
         int speed5 = 1;
         int speed6 = 1;
         int counter = 1;
-
+        int score = 0;
 
         public Form1()
         {
@@ -126,8 +126,9 @@ namespace Epic_Bullet_Dodger_2016
             //check if bullet is off screen
             if (drawX2 < 0)
             {
-                drawX2 = 300;
+                drawX2 = 500;
                 speed++;
+                score++;
             }
 
             if (drawX3 < 0)
@@ -141,13 +142,13 @@ namespace Epic_Bullet_Dodger_2016
                 drawX4 = 800;
                 speed3++;
             }
-            
+
             if (drawX5 < 0)
             {
-                drawX5 = 400;
+                drawX5 = 600;
                 speed4++;
             }
-            
+
             if (drawX6 < 0)
             {
                 drawX6 = 500;
@@ -170,12 +171,8 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
-                drawX2 = 300;
-                drawX3 = 600;
-                drawX4 = 800;
-                drawX5 = 400;
-                drawX6 = 500;
-                drawX7 = 700;
+                drawX2 = 500;
+                
 
 
             }
@@ -188,6 +185,9 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
+                drawX3 = 600;
+                
+                
 
             }
             double distance3 = Math.Pow(drawX4 - drawX, 2) + Math.Pow(drawY4 - drawY, 2);
@@ -199,7 +199,7 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
-
+                drawX4 = 800;
             }
             double distance4 = Math.Pow(drawX5 - drawX, 2) + Math.Pow(drawY5 - drawY, 2);
             if (distance4 < 40)
@@ -210,6 +210,7 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
+                drawX5 = 600;
 
             }
             double distance5 = Math.Pow(drawX6 - drawX, 2) + Math.Pow(drawY6 - drawY, 2);
@@ -221,6 +222,7 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
+                drawX6 = 500;
 
             }
             double distance6 = Math.Pow(drawX7 - drawX, 2) + Math.Pow(drawY7 - drawY, 2);
@@ -232,6 +234,7 @@ namespace Epic_Bullet_Dodger_2016
                 gametimer.Enabled = false;
                 speed = 1;
                 drawY = 155;
+                drawX7 = 700;
 
             }
             //increase speed (maybe)
@@ -240,12 +243,36 @@ namespace Epic_Bullet_Dodger_2016
             // - if counter equal 0
             //    - speed +=2;
             //    - counter = 0;
-            if (counter<=60)
+            if (counter <= 60)
             {
                 counter++;
                 //speed += 1;
             }
 
+            if (speed >= 15)
+            {
+                speed = 1;
+            }
+            if (speed2 >= 15)
+            {
+                speed2 = 1;
+            }
+            if (speed3 >= 15)
+            {
+                speed3 = 1;
+            }
+            if (speed4 >= 15)
+            {
+                speed4 = 1;
+            }
+            if (speed5 >= 15)
+            {
+                speed5 = 1;
+            }
+            if (speed6 >= 15)
+            {
+                speed6 = 1;
+            }
             Refresh();
         }
         

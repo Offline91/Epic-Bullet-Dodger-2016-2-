@@ -35,8 +35,8 @@
             this.quitButton1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gametimer = new System.Windows.Forms.Timer(this.components);
-            this.score = new System.Windows.Forms.Label();
-            this.count = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.scoreOutput = new System.Windows.Forms.Label();
             this.tick = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -87,24 +87,24 @@
             this.gametimer.Interval = 16;
             this.gametimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
-            // score
+            // scoreLabel
             // 
-            this.score.AutoSize = true;
-            this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score.Location = new System.Drawing.Point(12, 9);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(61, 20);
-            this.score.TabIndex = 4;
-            this.score.Text = "Score:";
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(12, 9);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(61, 20);
+            this.scoreLabel.TabIndex = 4;
+            this.scoreLabel.Text = "Score:";
             // 
-            // count
+            // scoreOutput
             // 
-            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.count.Location = new System.Drawing.Point(79, 12);
-            this.count.Name = "count";
-            this.count.Size = new System.Drawing.Size(20, 23);
-            this.count.TabIndex = 5;
-            this.count.Text = "...";
+            this.scoreOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreOutput.Location = new System.Drawing.Point(79, 12);
+            this.scoreOutput.Name = "scoreOutput";
+            this.scoreOutput.Size = new System.Drawing.Size(20, 23);
+            this.scoreOutput.TabIndex = 5;
+            this.scoreOutput.Text = "...";
             // 
             // tick
             // 
@@ -113,9 +113,9 @@
             // Form1
             // 
             this.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.ClientSize = new System.Drawing.Size(500, 450);
-            this.Controls.Add(this.count);
-            this.Controls.Add(this.score);
+            this.ClientSize = new System.Drawing.Size(500, 434);
+            this.Controls.Add(this.scoreOutput);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.quitButton1);
             this.Controls.Add(this.playButton1);
@@ -141,8 +141,8 @@
         private System.Windows.Forms.Button quitButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer gametimer;
-        private System.Windows.Forms.Label score;
-        private System.Windows.Forms.Label count;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label scoreOutput;
         private System.Windows.Forms.Timer tick;
     }
 }
