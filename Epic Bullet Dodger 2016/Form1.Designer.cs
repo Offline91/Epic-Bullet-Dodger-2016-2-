@@ -102,7 +102,7 @@
             this.scoreOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreOutput.Location = new System.Drawing.Point(79, 12);
             this.scoreOutput.Name = "scoreOutput";
-            this.scoreOutput.Size = new System.Drawing.Size(20, 23);
+            this.scoreOutput.Size = new System.Drawing.Size(60, 23);
             this.scoreOutput.TabIndex = 5;
             this.scoreOutput.Text = "...";
             // 
